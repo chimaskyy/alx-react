@@ -8,6 +8,7 @@
 
 #clickButton {
   display: inline-block;
+  font-weight: bold;
 }
 
 #count {
