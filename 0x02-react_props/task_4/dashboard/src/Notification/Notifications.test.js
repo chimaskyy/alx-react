@@ -29,4 +29,26 @@ describe("Notification component tests", () => {
       "Here is the list of notifications"
     );
   });
+
+  it("displays menu item when displayDrawer is false", () => {
+    const wrapper = shallow(<Notifications displayDrawer={false} />);
+    expect(wrapper.find(".menuItem")).toHaveLength(1);
+  });
+
+  it("does not display Notification div when displayDrawer is false", () => {
+    const wrapper = shallow(<Notifications displayDrawer={false} />);
+    expect(wrapper.find(".Notification")).toHaveLength(0);
+  });
+
+  it("displays menu item when displayDrawer is true", () => {
+    const wrapper = shallow(<Notifications displayDrawer={true} />);
+    expect(wrapper.find(".menuItem")).toHaveLength(1);
+  });
+
+  it("displays Notification div when displayDrawer is true", () => {
+    const wrapper = shallow(<Notifications displayDrawer={true} />);
+    expect(wrapper.find(".Notification")).toHaveLength(1);
+  });
+
+  
 });

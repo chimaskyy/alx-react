@@ -1,7 +1,9 @@
 #CourseList {
   width: 100%;
-  border: 1px solid black;
   border-collapse: collapse;
+  margin: 80px 0;
+  border: indianred 1px solid;
+
 }
 
 #CourseList thead {

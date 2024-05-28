@@ -9,24 +9,26 @@ import CourseList from "../CourseList/CourseList.js";
  
 
 // import { getFullYear, getFooterCopy } from "./utils.js";
-function App({ isLoggedIn = false }) {
+function App(isLoggedIn) {
   return (
     <>
       <Notifications />
       <div className="App">
         <Header />
-        {!isLoggedIn ? (
-          <Login /> ) : (
-            <CourseList/>
-          )}
+        {isLoggedIn ? <CourseList /> : <Login />}
         <Footer />
       </div>
     </>
   );
 }
 
+App.defaultProps = {
+  isLoggedIn: false,
+};
+
 App.propTypes = {
   isLoggedIn: PropTypes.bool,
-}
+};
+
 
 export default App;
