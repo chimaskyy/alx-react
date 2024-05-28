@@ -4,7 +4,6 @@ import NotificationItem from "./NotificationItem";
 import closeIcon from "../close-icon.png";
 import { getLatestNotification } from "../utils";
 import PropTypes from "prop-types";
-import NotificationItemShape from "./NotificationItemShape";
 
 function Notifications({ displayDrawer }) {
   return (
