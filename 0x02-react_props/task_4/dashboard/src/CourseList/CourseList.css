@@ -1,0 +1,14 @@
+#CourseList {
+  width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+#CourseList thead {
+  font-weight: bold;
+}
+
+#CourseList th, #CourseList td {
+  border: 1px solid black;
+  padding: 10px;
+}
