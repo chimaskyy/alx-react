@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "identity-obj-proxy": "^3.0.0",
+    "prop-types": "^15.8.1"
+  }
+}
