@@ -7,8 +7,7 @@ import Notifications from "../Notification/Notifications";
 import "./App.css";
 import PropTypes from "prop-types";
 import { getLatestNotification } from "../utils";
-import BodySection from "../BodySection/BodySection";
-import BodySectionWithMarginBottom from "../BodySection/BodySectionWithMarginBottom";
+
 class App extends React.Component {
   // Constructor method to initialize state and bind methods
   constructor(props) {
@@ -52,17 +51,10 @@ class App extends React.Component {
             <Header />
           </div>
           {this.props.isLoggedIn ? (
-            <BodySectionWithMarginBottom title="Course list">
-              <CourseList listCourses={this.listCourses} />
-            </BodySectionWithMarginBottom>
+            <CourseList listCourses={this.listCourses} />
           ) : (
-            <BodySectionWithMarginBottom title="Log in to continue">
-              <Login />
-            </BodySectionWithMarginBottom>
+            <Login />
           )}
-          <BodySection title="News from the School">
-            <p>The is your profile</p>
-          </BodySection>
           <Footer />
         </div>
       </>
