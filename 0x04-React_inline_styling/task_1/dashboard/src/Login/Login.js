@@ -6,11 +6,16 @@ function Login() {
     <div className={css(styles.AppBody)}>
       <p>Login to access the full dashboard</p>
       <form>
-        <label>email:</label>
-        <input type="email" id="email" name="email" />
+        <label htmlFor="email">Email:</label>
+        <input className={css(styles.input)} type="email" name="email"></input>
         <br></br>
-        <label>password:</label>
-        <input type="password" id="password" name="password" />
+        <label htmlFor="password">Password:</label>
+        <input
+          className={css(styles.input)}
+          type="password"
+          name="password"
+        ></input>
+        <br></br>
         <button>OK</button>
       </form>
     </div>
@@ -23,7 +28,10 @@ const styles = StyleSheet.create({
   padding: '2em',
   borderBottom: '3px solid #e0354b',
   height: '45%'
-  }
+  },
+  input: {
+    margin: "10px",
+  },
 })
 
 export default Login

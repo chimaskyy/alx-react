@@ -48,9 +48,20 @@ const styles = StyleSheet.create({
     marginLeft: "auto",
     marginRight: "auto",
   },
-  thead: {
-    fontWeight: 'bold'
-  }
+  th: {
+    borderBottom: "1px solid #ddd",
+    width: "80%",
+  },
+
+  td: {
+    width: "80%",
+  },
+
+  tr: {
+    "nth-child(2)": {
+      textAlign: "left",
+    },
+  },
 });
 
 CourseList.propTypes = {

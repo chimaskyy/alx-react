@@ -4,10 +4,11 @@ import Footer from "../Footer/Footer";
 import Login from "../Login/Login";
 import CourseList from "../CourseList/CourseList";
 import Notifications from "../Notification/Notifications";
-// import "./App.css";
 import PropTypes from "prop-types";
 import { getLatestNotification } from "../utils";
+import BodySectionWithMarginBottom from "../BodySection/BodySectionWithMarginBottom";
 import { StyleSheet, css } from "aphrodite";
+import BodySection from "../BodySection/BodySection";
 
 class App extends React.Component {
   // Constructor method to initialize state and bind methods
@@ -53,10 +54,22 @@ class App extends React.Component {
           </div>
           <div>
             {this.props.isLoggedIn ? (
-              <CourseList listCourses={this.listCourses} />
+              <BodySectionWithMarginBottom title="Course list">
+                <CourseList listCourses={this.listCourses} />
+              </BodySectionWithMarginBottom>
             ) : (
-              <Login />
+              <BodySectionWithMarginBottom title="Log in to continue">
+                <Login />
+              </BodySectionWithMarginBottom>
             )}
+            <BodySection title="News from the school">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perspiciatis at tempora odio, necessitatibus repudiandae
+                reiciendis cum nemo sed asperiores ut molestiae eaque aliquam
+                illo ipsa iste vero dolor voluptates.
+              </p>
+            </BodySection>
           </div>
           <Footer />
         </div>

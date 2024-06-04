@@ -18,7 +18,6 @@ function Login() {
         <br></br>
         <button>OK</button>
       </form>
-      <p>News from School</p>
     </div>
   );
 }

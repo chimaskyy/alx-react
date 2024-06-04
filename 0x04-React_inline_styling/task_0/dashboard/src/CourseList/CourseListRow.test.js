@@ -10,6 +10,9 @@ describe("CourseListRow component tests", () => {
     expect(wrapper.find("th")).toHaveLength(1);
     expect(wrapper.find("th").prop("colSpan")).toBe(2);
     expect(wrapper.find("th").text()).toBe("First cell");
+     expect(wrapper.find("tr").childAt(0).html()).toEqual(
+       '<th style="background-color:#deb5b545" colSpan="2">test</th>'
+     );
   });
 
   it("renders two cells when textSecondCell is present and isHeader is true", () => {
