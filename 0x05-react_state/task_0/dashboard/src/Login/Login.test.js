@@ -1,6 +1,8 @@
 import Login from "./Login";
 import React from "react";
 import { shallow } from "enzyme";
+import "@testing-library/jest-dom/extend-expect";
+
 
 
 describe("Header Component Tests", () => {
