@@ -1,6 +1,5 @@
-import { SELECT_COURSE, UNSELECT_COURSE } from "./courseActionTypes";
+import { SELECT_COURSE, UNSELECT_COURSE, FETCH_COURSE_SUCCESS } from "./courseActionTypes";
 // import { dispatch } from "redux"; // Add this line to import the dispatch function
-
 export function selectCourse(index) {
   return {
     type: SELECT_COURSE,
@@ -18,3 +17,9 @@ export function unSelectCourse(index) {
 
 export const boundUnSelectCourse = (index) => dispatch(unSelectCourse(index));
 
+export const fetchCourseSuccess = (data) => {
+  return {
+    type: FETCH_COURSE_SUCCESS,
+    data,
+  };
+};
